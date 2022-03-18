@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Healthcare - Schedule</title>
+</head>
+<body>
+    <div class="main d-grid-lapi d-flex">
+        <!-- Left-fixed -->
+        <div id="fixed" class="fixed left-fixed d-none-lapi col-lapi-12 w-20">
+            <div class="close d-block-lapi"><img src="../images/consultant/icons/close.svg" id="close" alt=""></div>
+            <a href="#" class="logo-container d-flex align-center left-fixed-row-logo">
+                <img src="../images/consultant/icons/logo.svg" alt="" class="logo">
+                <h3 class="text-light nunito">Health Lite</h3>
+            </a>
+            <div class="inter left-fixed-row-1">
+                <a href="consultant.html" class="d-flex align-center left-fixed-row-item dashboard">
+                    <img src="../images/consultant/icons/dashboard.svg" alt="">
+                    <p class="text-light text-16">Dashboard</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/waiting.svg" alt="">
+                    <p class="text-light text-16">Waiting Room</p>
+                </a>
+                <a href="schedule.html" class="d-flex align-center left-fixed-row-item schedule active">
+                    <img src="../images/consultant/icons/schedule.svg" alt="">
+                    <p class="text-light text-16">Schedule</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/patients.svg" alt="">
+                    <p class="text-light text-16">My Patients</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/notes.svg" alt="">
+                    <p class="text-light text-16">Notes</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/chat.svg" alt="">
+                    <p class="text-light text-16">Chats</p>
+                </a>
+            </div>
+            <div class="left-fixed-row-2">
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/profile.svg" alt="">
+                    <p class="text-light text-16">My Profile</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/settings.svg" alt="">
+                    <p class="text-light text-16">Settings</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right-scroll -->
+        <div class="col-10 col-lapi-12 right-scroll col-tab-12 w-80 w-100-lapi">
+            <div class="d-flex align-center flex-end right-scroll-header">
+                <img src="../images/consultant/icons/hamburger.svg" id="menu" alt="">
+                <img src="../images/consultant/icons/notification.svg" alt="">
+                <img src="../images/consultant/icons/profile-2.svg" class="profile-2" alt="">
+            </div>
+            <div class="section section-left-1 mt-70 mx-20 d-grid align-center right-scroll-body schedule-right-scroll-body">
+                <div class="section-left-1-left col-8 col-tab-12 text-light schedule-hero">
+                    <h2 class="inter">Your Schedule</h2>
+                    <p class="text-16 w-80">
+                        All client consultations are available here. 
+                        You can intiate consultations for each client’s proceedure.
+                    </p>
+                    <a href="#" class="btn btn-blue"><span>
+                        <img src="../images/consultant/icons/eye.svg" alt=""></span> 
+                        <span>Add new schedule</span>
+                    </a>
+                </div>
+                <div class="col-4 section-left-1-right d-none-tab"><img src="../images/schedule/character.png" class="w-100" alt=""></div>
+            </div>
+            <div class="d-grid d-block-tab gap-15 mx-20">
+                <div class="col-4 right-scroll-body-col-1">
+                    <div class="section section-right-1 mb-10"><img src="../images/consultant/calendar.svg" class="w-100" alt=""></div>
+                    <div class="section section-right-3">
+                        <div class="d-flex space-between mb-20">
+                            <p class="text-dark text-18 font-weight-700 blue-under relative">Recent Activities</p>
+                            <img src="../images/consultant/icons/activities-notification.svg" class="cursor-pointer" alt="">
+                        </div>
+                        <div id="activities-body"></div>
+                    </div>
+                </div>
+                <div class="col-8 right-scroll-body-col-2">
+                    <div class="section section-left-3">
+                        <div class="d-flex space-between mb-20">
+                            <p class="text-dark text-18 font-weight-700 blue-under relative">Thursday - 18th February<span class="text-14 text-grey font-weight-500">, 2021</span></p>
+                            <p class="inter text-grey left-3-text">Show by <span class="text-blue cursor-pointer text-14 font-weight-700"> Day &#x2335;</p>
+                        </div>
+                        <div class="d-flex align-center mb-10">
+                            <div class="circle-img-container d-flex" id="circle-img-container"></div>
+                            <p class="text-13 ml-5 text-grey left-3-text">you have <span id="appointment-number"></span> new appointments</p>
+                        </div>
+                        <div>
+                            <div id="next-patient-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/schedule.js"></script>
+</body>
+</html>

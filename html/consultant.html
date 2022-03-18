@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Healthcare - Consultant Dashboard</title>
+</head>
+<body>
+    <div class="main d-grid-lapi d-block-tab d-block-md d-flex">
+        <!-- Left-fixed -->
+        <div id="fixed" class="fixed left-fixed d-none-lapi col-lapi-12 w-20">
+            <div class="close d-block-lapi"><img src="../images/consultant/icons/close.svg" id="close" alt=""></div>
+            <a href="#" class="logo-container d-flex align-center left-fixed-row-logo">
+                <img src="../images/consultant/icons/logo.svg" alt="" class="logo">
+                <h3 class="text-light nunito">Health Lite</h3>
+            </a>
+            <div class="inter left-fixed-row-1">
+                <a href="consultant.html" class="d-flex align-center left-fixed-row-item dashboard active">
+                    <img src="../images/consultant/icons/dashboard.svg" alt="">
+                    <p class="text-light text-16">Dashboard</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/waiting.svg" alt="">
+                    <p class="text-light text-16">Waiting Room</p>
+                </a>
+                <a href="schedule.html" class="d-flex align-center left-fixed-row-item schedule">
+                    <img src="../images/consultant/icons/schedule.svg" alt="">
+                    <p class="text-light text-16">Schedule</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/patients.svg" alt="">
+                    <p class="text-light text-16">My Patients</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/notes.svg" alt="">
+                    <p class="text-light text-16">Notes</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/chat.svg" alt="">
+                    <p class="text-light text-16">Chats</p>
+                </a>
+            </div>
+            <div class="left-fixed-row-2">
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/profile.svg" alt="">
+                    <p class="text-light text-16">My Profile</p>
+                </a>
+                <a href="#" class="d-flex align-center left-fixed-row-item">
+                    <img src="../images/consultant/icons/settings.svg" alt="">
+                    <p class="text-light text-16">Settings</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right-scroll -->
+        <div class="col-10 col-lapi-12 right-scroll col-tab-12 w-80 w-100-lapi">
+            <div class="d-flex align-center flex-end right-scroll-header">
+                <img src="../images/consultant/icons/hamburger.svg" id="menu" alt="">
+                <img src="../images/consultant/icons/notification.svg" alt="">
+                <img src="../images/consultant/icons/profile-2.svg" class="profile-2" alt="">
+            </div>
+            <div class="d-grid right-scroll-body gap-15 d-block-tab w-100">
+                <div class="col-8 col-md-8 right-scroll-body-col-1 col-lapi-8">
+                    <div class="section section-left-1 d-grid align-center">
+                        <div class="col-9 col-md-12 section-left-1-left text-light">
+                            <h2 class="inter"><span class="text-26 font-weight-500">Welcome,</span> Dr. Fayemi David</h2>
+                            <p class="text-16">
+                                You have <span class="appointments"></span> new appointments and 
+                                there are currently <span class="waiting-room"></span> patients 
+                                in the waiting room. Have a nice day at work!
+                            </p>
+                            <a href="#" class="btn btn-blue"><span>
+                                <img src="../images/consultant/icons/eye.svg" alt=""></span> 
+                                <span>View your appointments</span>
+                            </a>
+                            <a href="#" class="btn btn-blue">Go to waiting room &RightArrow;</a>
+                        </div>
+                        <div class="col-3 section-left-1-right d-md-none"><img src="../images/consultant/character.svg" class="w-100" alt=""></div>
+                    </div>
+                    <div class="section section-left-2 d-grid d-block-tab gap-15">
+                        <div class="section-left-2-card col-4">
+                            <div class="d-flex space-between mb-20">
+                                <img src="../images/consultant/icons/patient-avatar.svg" alt="">
+                                <p class="text-14 font-weight-700 text-dark">All Time &#x2335;</p>
+                            </div>
+                            <p class="font-weight-800 text-26 mb-10 inter text-dark" id="total-patients"></p>
+                            <p class="inter mb-20 text-grey text-16">Total Patients</p>
+                            <div class="d-flex">
+                                <img src="../images/consultant/icons/arrow-red.svg" alt="">
+                                <p class="text-dark text-14 ml-3">5% less than last month</p>
+                            </div>
+                        </div>
+                        <div class="section-left-2-card col-4">
+                            <div class="d-flex space-between mb-20">
+                                <img src="../images/consultant/icons/appointment.svg" alt="">
+                                <p class="text-14 font-weight-700 text-dark">Today &#x2335;</p>
+                            </div>
+                            <p class="font-weight-800 text-26 mb-10 inter text-dark appointments" id="appointments"></p>
+                            <p class="inter mb-20 text-grey text-16">Appointments</p>
+                            <div class="d-flex">
+                                <img src="../images/consultant/icons/arrow-green.svg" alt="">
+                                <p class="text-dark text-14 ml-3">15% more than yesterday</p>
+                            </div>
+                        </div>
+                        <div class="section-left-2-card col-4">
+                            <div class="d-flex space-between mb-20">
+                                <img src="../images/consultant/icons/waiting-room.svg" alt="">
+                                <p class="text-14 font-weight-700 text-dark">Today &#x2335;</p>
+                            </div>
+                            <p class="font-weight-800 text-26 mb-10 inter text-dark waiting-room" id="waiting-room"></p>
+                            <p class="inter mb-20 text-grey text-16">Waiting Room</p>
+                            <div class="d-flex">
+                                <img src="../images/consultant/icons/arrow-green.svg" alt="">
+                                <p class="text-dark text-14 ml-3">35% less than yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section section-left-3 section-left-3-con" id="section-left-3">
+                        <div class="d-flex space-between mb-20">
+                            <p class="text-dark text-18 font-weight-700 blue-under relative">Your next patients</p>
+                            <p id="view-all" class="text-blue cursor-pointer text-14 font-weight-700"><span id="right-arrow">View All &RightArrow;</span><span id="down-arrow">Show Less</span></p>
+                        </div>
+                        <div id="next-patient-body"></div>
+                    </div>
+                    <div class="section section-left-4"><img src="../images/consultant/chart.svg" class="w-100" alt=""></div>
+                </div>
+                <div class="col-4 col-md-4 right-scroll-body-col-2">
+                    <div class="section section-right-1 mb-10"><img src="../images/consultant/calendar.svg" class="w-100" alt=""></div>
+                    <div class="section section-right-2 mb-10"><img src="../images/consultant/pie-chart.svg" class="w-100" alt=""></div>
+                    <div class="section section-right-3">
+                        <div class="d-flex space-between mb-20">
+                            <p class="text-dark text-18 font-weight-700 blue-under relative">Activities</p>
+                            <img src="../images/consultant/icons/activities-notification.svg" class="cursor-pointer" alt="">
+                        </div>
+                        <div id="activities-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/consultant.js"></script>
+</body>
+</html>
